@@ -31,7 +31,6 @@ class Program
             switch (action)
             {
                 case "1": // Write
-                    Console.WriteLine("Write");
                     prompt.RandomPrompt();
                     Entry entry = new Entry(prompt._prompt, Console.ReadLine());
                     journal._entries.Add(entry);
