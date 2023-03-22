@@ -8,10 +8,6 @@ public class Activity
     private int _duration;
     private int _spinnerCounter;
 
-    // public Activity()
-    // {
-    // }
-
     public void setDuration(int duration)
     {
         _duration = duration;
