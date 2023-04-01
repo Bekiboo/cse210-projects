@@ -59,6 +59,26 @@ public abstract class Monster
         return monsterList;
     }
 
+    public static Monster GetRandomMonsterByPowerlevel(int powerLevel)
+    {
+        Monster[] monstersByPowerLevel = new Monster[_monsterList.Length];
+        int count = 0;
+
+        foreach (Monster monster in _monsterList)
+        {
+            if (monster._powerLevel == powerLevel)
+            {
+                monstersByPowerLevel[count] = monster;
+                count++;
+            }
+        }
+
+        Random random = new Random();
+        int randomIndex = random.Next(0, monstersByPowerLevel.Length);
+
+        return monstersByPowerLevel[randomIndex];
+    }
+
     public abstract object SpecialAttack();
     public abstract string SpecialAbility();
 }
