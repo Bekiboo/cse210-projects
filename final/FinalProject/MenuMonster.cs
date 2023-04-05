@@ -56,23 +56,23 @@ public class MenuMonster : Menu
         switch (type)
         {
             case "1":
-                MonsterBeast monster = new MonsterBeast(name, description, health, attack, defense, powerLevel);
+                MonsterBeast monster = new MonsterBeast(name, description, health, attack, defense);
                 Monster.AddMonsterToList(monster);
                 break;
             case "2":
-                MonsterDragon monster2 = new MonsterDragon(name, description, health, attack, defense, powerLevel);
+                MonsterDragon monster2 = new MonsterDragon(name, description, health, attack, defense);
                 Monster.AddMonsterToList(monster2);
                 break;
             case "3":
-                MonsterElemental monster3 = new MonsterElemental(name, description, health, attack, defense, powerLevel);
+                MonsterElemental monster3 = new MonsterElemental(name, description, health, attack, defense);
                 Monster.AddMonsterToList(monster3);
                 break;
             case "4":
-                MonsterSkulker monster4 = new MonsterSkulker(name, description, health, attack, defense, powerLevel);
+                MonsterSkulker monster4 = new MonsterSkulker(name, description, health, attack, defense);
                 Monster.AddMonsterToList(monster4);
                 break;
             case "5":
-                MonsterUndead monster5 = new MonsterUndead(name, description, health, attack, defense, powerLevel);
+                MonsterUndead monster5 = new MonsterUndead(name, description, health, attack, defense);
                 Monster.AddMonsterToList(monster5);
                 break;
         }

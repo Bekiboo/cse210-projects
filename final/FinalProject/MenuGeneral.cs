@@ -25,7 +25,7 @@ public class MenuGeneral : Menu
                 new MenuEncounter().RunMenu();
                 break;
             case "3":
-                // TODO: Quit program
+                Environment.Exit(0);
                 break;
             default:
                 break;

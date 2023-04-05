@@ -7,11 +7,9 @@ public class MonsterElemental : Monster
         string description,
         int health,
         int attack,
-        int defense,
-
-        int powerLevel
+        int defense
     )
-        : base(name, description, health, attack, defense, powerLevel)
+        : base(name, description, health, attack, defense)
     {
 
     }

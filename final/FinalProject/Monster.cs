@@ -5,20 +5,20 @@ public abstract class Monster
     private string _name { get; }
     private string _description { get; }
     private int _health { get; set; }
+    private int _maxHealth { get; }
     protected int _attack { get; }
     private int _defense { get; }
-    private int _powerLevel { get; }
 
 
 
-    public Monster(string name, string description, int health, int attack, int defense, int powerLevel)
+    public Monster(string name, string description, int health, int attack, int defense)
     {
         _name = name;
         _description = description;
         _health = health;
         _attack = attack;
         _defense = defense;
-        _powerLevel = powerLevel;
+        _maxHealth = health;
     }
 
     public static void AddMonsterToList(Monster newMonster)
@@ -59,24 +59,49 @@ public abstract class Monster
         return monsterList;
     }
 
-    public static Monster GetRandomMonsterByPowerlevel(int powerLevel)
+    public string GetMonsterName()
     {
-        Monster[] monstersByPowerLevel = new Monster[_monsterList.Length];
-        int count = 0;
+        return _name;
+    }
 
-        foreach (Monster monster in _monsterList)
-        {
-            if (monster._powerLevel == powerLevel)
-            {
-                monstersByPowerLevel[count] = monster;
-                count++;
-            }
-        }
+    public string GetMonsterDescription()
+    {
+        return _description;
+    }
 
+    public int GetMonsterHealth()
+    {
+        return _health;
+    }
+
+    public int GetMonsterAttack()
+    {
+        return _attack;
+    }
+
+    public int GetMonsterDefense()
+    {
+        return _defense;
+    }
+
+    public int GetMonsterMaxHealth()
+    {
+        return _maxHealth;
+    }
+
+    public void SetMonsterHealth(int health)
+    {
+        _health = health;
+    }
+
+
+
+    public static Monster GetRandomMonster()
+    {
         Random random = new Random();
-        int randomIndex = random.Next(0, monstersByPowerLevel.Length);
+        int randomIndex = random.Next(0, _monsterList.Length);
 
-        return monstersByPowerLevel[randomIndex];
+        return _monsterList[randomIndex];
     }
 
     public abstract object SpecialAttack();
