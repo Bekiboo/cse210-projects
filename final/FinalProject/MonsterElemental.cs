@@ -18,11 +18,11 @@ public class MonsterElemental : Monster
     {
         Random rand = new Random();
         int damage = rand.Next(_attack / 2, _attack * 2);
-        return $"The dragon breathes fire in a 15ft cone, dealing {damage} damage";
+        return $"The elemental unleashes a burst of energy, dealing {damage} damage to all enemies.";
     }
 
     public override string SpecialAbility()
     {
-        return "Fly";
+        return "Phase Shift: The elemental becomes incorporeal and gains resistance to all damage for 1 turn.";
     }
 }

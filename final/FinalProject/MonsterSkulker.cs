@@ -18,11 +18,11 @@ public class MonsterSkulker : Monster
     {
         Random rand = new Random();
         int damage = rand.Next(_attack / 2, _attack * 2);
-        return $"The dragon breathes fire in a 15ft cone, dealing {damage} damage";
+        return $"The skulker disappears from sight and reappears behind its target, dealing {damage} damage.";
     }
 
     public override string SpecialAbility()
     {
-        return "Fly";
+        return "Evasion: The skulker can use its reaction to dodge an incoming attack.";
     }
 }

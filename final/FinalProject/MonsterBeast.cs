@@ -18,11 +18,11 @@ public class MonsterBeast : Monster
     {
         Random rand = new Random();
         int damage = rand.Next(_attack / 2, _attack * 2);
-        return $"The dragon breathes fire in a 15ft cone, dealing {damage} damage";
+        return $"The beast unleashes a ferocious roar, dealing {damage} damage and stunning the target for 1 turn.";
     }
 
     public override string SpecialAbility()
     {
-        return "Fly";
+        return "Pack Tactics: If the beast has an ally within 5ft of its target, it gains advantage on its attack rolls.";
     }
 }
